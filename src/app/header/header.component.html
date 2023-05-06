@@ -1,23 +1,26 @@
 <div class="header">
-  <div class="container">
-    <img src="assets/header/white_revert.svg" alt="#" class="logo" />
-    <div class="navbar">
-      <div class="search_block">
-        <input type="text" placeholder="Поиск..." class="search" />
-        <button class="search_button">
-          <img
-            src="assets/header/search_icon_revert.svg"
-            alt=""
-            class="search_button_icon"
-          />
-        </button>
-      </div>
-      <div class="links">
-        <a href="#" class="link">БЛОГ</a>
-        <a href="#" class="link">ПРОЕКТЫ</a>
-        <a href="#" class="link">ПОРТФОЛИО</a>
-        <a href="#" class="link">ОБО МНЕ</a>
+  <div class="desktop" *ngIf="desktop">
+    <div class="container">
+      <img src="assets/header/white_revert.svg" alt="#" class="logo" />
+      <div class="navbar">
+        <div class="search_block">
+          <input type="text" placeholder="Поиск..." class="search" />
+          <button class="search_button">
+            <img
+              src="assets/header/search_icon_revert.svg"
+              alt=""
+              class="search_button_icon"
+            />
+          </button>
+        </div>
+        <div class="links">
+          <a href="#" class="link">БЛОГ</a>
+          <a href="#" class="link">ПРОЕКТЫ</a>
+          <a href="#" class="link">ПОРТФОЛИО</a>
+          <a href="#" class="link">ОБО МНЕ</a>
+        </div>
       </div>
     </div>
   </div>
+  <div class="mobile" *ngIf="!desktop"></div>
 </div>
