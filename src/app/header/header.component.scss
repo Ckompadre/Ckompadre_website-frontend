@@ -1,92 +1,116 @@
-.container {
-  display: flex;
-  justify-content: space-between;
+// For desktop
+.dcontainer {
   margin: 0 auto;
+  height: 14vh;
   max-width: 1400px;
 }
-
-.header {
-  background: #000;
-  width: 100%;
-}
-
-.link {
-  background: #000;
-  color: #fff;
-  font-size: x-large;
-  padding: 2vh 1vh 1vh;
-  text-decoration: none;
-  transition: 100ms;
-  user-select: none;
-  white-space: nowrap;
-}
-
-.link:hover {
-  background: #fff;
-  color: #000;
-  transition: 100ms;
-}
-
-.links {
-  align-items: end;
-  display: flex;
-}
-
-.logo {
-  height: 13vh;
+.dlogo {
   margin: 5px;
 }
-
 .navbar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 5px 5px 0;
 }
+.dsearch_block {
+  border: 1px solid #fff;
+}
+.dsearch {
+  font-size: medium;
+}
+.dsearch:hover,
+.dsearch:focus {
+  background: #2b2b2b;
+}
+.dsearch_button:hover {
+  background: #2b2b2b;
+}
+.dlinks {
+  align-items: end;
+}
+.dlink {
+  padding: 2vh 1vh 1vh;
+}
+.dlink:hover {
+  background: #fff;
+  color: #000;
+  transition: 0ms;
+}
 
+// For mobile
+.mcontainer {
+  height: 10vh;
+  width: 100%;
+}
+.mlogo,
+.menu_button {
+  margin: 5px;
+}
+.msearch {
+  font-size: x-large;
+}
+.msearch_button {
+  padding: 15px;
+}
+.mlinks {
+  flex-direction: column;
+  align-items: center;
+}
+.mlink {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+.mlink:active {
+  color: #000;
+  background: #fff;
+  transition: 0ms;
+}
+
+// For all
+.header {
+  background: #000;
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.search_block {
+  width: 100%;
+  display: flex;
+}
 .search,
 .search::placeholder {
   background: #000;
-  border: 1px solid #fff;
-  border-right: none;
-  box-sizing: border-box;
   color: #fff;
   outline: none;
-  padding-left: 10px;
+  border: none;
   width: 100%;
+  padding: 0 10px;
 }
-
-.search:hover,
-.search:focus {
-  background: #2b2b2b;
-  transition: 100ms;
-}
-
-.search_block {
-  display: flex;
-  width: 100%;
-}
-
 .search_button {
   background: #000;
-  border: 1px solid #fff;
-  border-left: none;
+  border: none;
   cursor: pointer;
-  margin: 0;
-  transition: 100ms;
 }
-
 .search_button:active {
   background: #fff;
-  transition: 100ms;
 }
-
-.search_button:hover {
-  background: #2b2b2b;
-  transition: 100ms;
-}
-
 .search_button_icon {
   height: 3vh;
   padding-top: 4px;
+}
+.links {
+  display: flex;
+}
+.link {
+  color: #fff;
+  background: #000;
+  font-size: 3vh;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  transition: 300ms;
 }
