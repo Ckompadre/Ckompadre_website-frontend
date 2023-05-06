@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
     this.openMenu = !this.openMenu;
   }
 
-  // EsterEgg
+  // EasterEgg
   clickLogo = 1;
   onClickLogo() {
     this.clickLogo++;
