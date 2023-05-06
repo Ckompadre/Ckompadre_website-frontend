@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   // Device detection
-  desktop = false;
+  desktop = true;
   ngOnInit(): void {
     const device = new RegExp(
       'Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini',
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
     this.openMenu = !this.openMenu;
   }
 
-  // EasterEgg
+  // EsterEgg
   clickLogo = 1;
   onClickLogo() {
     this.clickLogo++;

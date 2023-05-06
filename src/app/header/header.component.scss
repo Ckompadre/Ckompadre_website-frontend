@@ -4,9 +4,6 @@
   height: 14vh;
   max-width: 1400px;
 }
-.dlogo {
-  margin: 5px;
-}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -43,15 +40,12 @@
   height: 10vh;
   width: 100%;
 }
-.mlogo,
-.menu_button {
-  margin: 5px;
-}
 .msearch {
   font-size: x-large;
 }
 .msearch_button {
   padding: 15px;
+  margin-right: 5px;
 }
 .mlinks {
   flex-direction: column;
@@ -77,8 +71,13 @@
   display: flex;
   justify-content: space-between;
 }
+.logo,
+.menu_button {
+  margin: 5px;
+}
 .search_block {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
 }
 .search,
@@ -94,9 +93,11 @@
   background: #000;
   border: none;
   cursor: pointer;
+  transition: 200ms;
 }
 .search_button:active {
   background: #fff;
+  transition: 0ms;
 }
 .search_button_icon {
   height: 3vh;
