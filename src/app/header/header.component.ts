@@ -1,22 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { DeviceDetectorService } from '../device-detector.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  // Device detection
-  desktop = true;
-  ngOnInit(): void {
-    const device = new RegExp(
-      'Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini',
-      'i'
-    );
-    if (device.test(navigator.userAgent)) {
-      this.desktop = false;
-    }
-  }
+export class HeaderComponent {
+  dd = new DeviceDetectorService();
+  desktop = this.dd.deviceDetection();
 
   openMenu = false;
   onClickMenu() {
