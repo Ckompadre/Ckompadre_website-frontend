@@ -42,13 +42,4 @@ export class HeaderComponent {
   onClickMenu() {
     this.openMenu = !this.openMenu;
   }
-
-  // EasterEgg
-  clickLogo = 1;
-  onClickLogo() {
-    this.clickLogo++;
-    if (this.clickLogo == 7) {
-      this.clickLogo = 1;
-    }
-  }
 }
