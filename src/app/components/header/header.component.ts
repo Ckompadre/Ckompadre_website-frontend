@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DeviceDetectorService } from '../services/device-detector.service';
-import { LocalizationService } from '../services/localization.service';
+import { DeviceDetectorService } from '../../services/device-detector.service';
+import { LocalizationService } from '../../services/localization.service';
 
 @Component({
   selector: 'app-header',
@@ -46,9 +46,9 @@ export class HeaderComponent {
   // EasterEgg
   clickLogo = 1;
   onClickLogo() {
+    this.clickLogo++;
     if (this.clickLogo == 7) {
       this.clickLogo = 1;
     }
-    this.clickLogo++;
   }
 }
