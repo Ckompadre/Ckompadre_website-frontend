@@ -48,7 +48,15 @@
       />
       <div class="navbar">
         <div class="search_block dsearch_block">
-          <input type="text" placeholder="Поиск..." class="search dsearch" />
+          <button class="dlocale_button" (click)="onClickLocale()">
+            <span *ngIf="localeRu">РУ</span>
+            <span *ngIf="!localeRu">EN</span>
+          </button>
+          <input
+            type="text"
+            placeholder="{{ search | titlecase }}..."
+            class="search dsearch"
+          />
           <button class="search_button dsearch_button">
             <img
               src="assets/header/search_icon_revert.svg"
@@ -58,10 +66,10 @@
           </button>
         </div>
         <div class="links dlinks">
-          <a href="#" class="link dlink">БЛОГ</a>
-          <a href="#" class="link dlink">ПРОЕКТЫ</a>
-          <a href="#" class="link dlink">ПОРТФОЛИО</a>
-          <a href="#" class="link dlink">ОБО МНЕ</a>
+          <a href="#" class="link dlink">{{ blog | uppercase }}</a>
+          <a href="#" class="link dlink">{{ projects | uppercase }}</a>
+          <a href="#" class="link dlink">{{ portfolio | uppercase }}</a>
+          <a href="#" class="link dlink">{{ about | uppercase }}</a>
         </div>
       </div>
     </div>
